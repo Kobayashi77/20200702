@@ -3,13 +3,13 @@ const form = document.getElementById("form");
 const input = document.getElementById("msg");
 const chats = document.getElementById("chats");
 
-const nameform = document.getElementById("nameform");
-const name = document.getElementById("name");
-
-let username='';
-nameform.addEventListener('submit', function(event){
-  username = name.value;
+form.addEventListener('submit', function(event){
+  socketio.emit('message', input.value);
+  input.value='';
   event.preventDefault();
-  nameform.style.display ="none";
-  form.style.display ="block";
+})
+socketio.on('message',function(msg){
+  const li = document.createElement("li");
+  li.append(msg);
+  chats.append(li);
 });
