@@ -15,13 +15,13 @@ nameform.addEventListener('submit', function(event){
 })
 
 form.addEventListener('submit', function(event){
-　const msg = JSON.stringify({msg: input.value, name: 'user'})
-　socketio.emit('message', msg);
+  const msg = JSON.stringify({msg: input.value, name: username})
+  socketio.emit('message', msg);
   input.value='';
   event.preventDefault();
 })
 socketio.on('message',function(msg){
-　const obj = JSON.parse(msg);
+  const obj = JSON.parse(msg);
 
   const dt = document.createElement("dt");
   const dd = document.createElement("dd");
