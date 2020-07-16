@@ -5,13 +5,13 @@
 h1
 {
     text-align: center;
-    background-color:　#765;
-    color: #333);
+    background-color:#888;
+    color: #ccc);
 }
 input,
 button
 {
-    border:1px solid #333;
+    border:1px solid #ccc;
     font-size:5vw;
     line-height:7vw;
     height:10vw;
