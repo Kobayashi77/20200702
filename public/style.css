@@ -55,7 +55,7 @@ button
     left: -6vw;
     margin-top: -7vw;
     border: 3vw solid transparent;
-    border-right: 8vw solid　#cccccc;
+    border-right: 8vw solid　#CCCCCC;
     transform: rotate(40deg);
     z-index: -1;
 }
